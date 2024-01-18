@@ -14,6 +14,8 @@ import { EditButtonComponent } from './shared/edit-button/edit-button.component'
 import { ProfileComComponent } from './shared/profile-com/profile-com.component';
 import { PublicProfSetComponent } from './shared/public-prof-set/public-prof-set.component';
 import { UpdateProfileComponent } from './Components/update-profile/update-profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { UpdateProfileComponent } from './Components/update-profile/update-profi
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
