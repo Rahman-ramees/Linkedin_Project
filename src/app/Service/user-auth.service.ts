@@ -8,7 +8,6 @@ export class UserAuthService {
   signupDataArray: SignupData[] = [];
 
   constructor() { 
-    console.log(this.signupDataArray);
     
   }
 }

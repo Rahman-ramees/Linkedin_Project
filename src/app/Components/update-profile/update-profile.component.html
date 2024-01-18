@@ -1,0 +1,80 @@
+<body class="w-screen h-screen bg-red-200 flex justify-center">
+    <main class="w-screen h-screen md:w-[46rem] md:h-[50rem] bg-white my-auto border rounded-lg">
+        <!-- Head Nav & Close Bar -->
+        <section class="">
+            <div class="flex justify-between p-4 border-b">
+                <h1 class="font-bold text-xl">Edit Intro</h1>
+                <button>
+                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="darkgray" class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                   </svg>
+                </button>
+            </div>
+        </section>
+        <!-- First name section -->
+        <section class="p-5 flex flex-col gap-5">
+            <form [formGroup]="updateProfileForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-5">
+               <div class="flex flex-col gap-5">
+                    <p class="text-gray-500 text-[12px]">*Indicate required</p>
+                    <div class="flex flex-col">
+                            <label for="firstName" class="text-gray-500 text-[15px]">First Name*</label>
+                            <input type="text" id="firstName" formControlName="firstName" required class="border border-black p-1 rounded-md" />
+                    </div>
+              
+                    <div class="flex flex-col">
+                            <label for="secondName" class="text-gray-500 text-[15px]">Second Name*</label>
+                            <input type="text" id="secondName" formControlName="secondName" required class="border border-black p-1 rounded-md" />
+                    </div>
+              
+                    <div class="flex flex-col">
+                        <label for="additionalName" class="text-gray-500 text-[15px]">Additional Name</label>
+                        <input type="text" id="additionalName" formControlName="additionalName" class="border border-black p-1 rounded-md" />
+                    </div>
+               </div>
+
+               <div class="flex flex-col gap-5">
+                <p class="text-gray-500 text-[12px]">Name pronunciation</p>
+                <p class="text-gray-500 text-[12px]">This can only be added using our mobile app</p>
+                <div class="flex flex-col ">
+                    <label for="selectPersonType" class="text-gray-500 text-[15px]">Pronounce</label>
+                    <select id="selectPersonType" formControlName="personType" class="border border-black p-1 rounded-md bg-white">
+                      <option *ngFor="let type of personTypes" [value]="type.value">{{ type.viewValue }}</option>
+                    </select>
+                    <p class="text-gray-500 text-[15px]">Let others know how to refer to you.</p>
+
+                    <!-- ABOUT GENDER PRONOUNCE -->
+                    <p class="text-gray-500 mt-5">Learn more about <a href="https://www.linkedin.com/help/linkedin/answer/a569520" class="font-bold text-blue-600">Gender Pronounce.</a></p>
+
+                    <!-- HEADLINE -->
+                    <div class="mt-5">
+                        <p class="text-gray-500 text-[15px]">Headline*</p>
+                        <div class="w-full h-fit border border-black rounded-lg flex flex-col">
+                            <input type="text" id="Headline" formControlName="headLine" required class="w-full p-3 rounded-lg" />
+                            <hr class="mx-3">
+                            <div class="p-5">
+                                <h1 class="text-[15px] text-gray-500"><a href="" class="font-bold text-blue-600 text-sm">Get AI suggetions</a> with premium</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+           </div>
+
+           <div>
+            <h1>Current Position</h1>
+            <div class="flex flex-col">
+                <label for="currenPosition" class="text-gray-500 text-[15px]">Position*</label>
+                <input type="text" id="currenPosition" formControlName="currenPosition" required class="border border-black p-1 rounded-md" />
+            </div>
+           </div>
+
+              
+                <div class="flex justify-end">
+                    <button type="submit" class="bg-blue-600 text-white px-5 py-[5px] rounded-full font-bold">Save</button>
+                </div>
+
+              </form>
+        </section>
+
+        
+    </main>
+</body>

@@ -9,10 +9,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './Components/home/home.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { ProfileComponent } from './Components/profile/profile.component';
-import { ImageComponent } from './Components/profile/image/image.component';
-import { EditButtonComponent } from './Components/profile/edit-button/edit-button.component';
-import { ProfileComComponent } from './Components/profile/profile-com/profile-com.component';
-import { PublicProfSetComponent } from './Components/profile/public-prof-set/public-prof-set.component';
+import { ImageComponent } from './shared/image/image.component';
+import { EditButtonComponent } from './shared/edit-button/edit-button.component';
+import { ProfileComComponent } from './shared/profile-com/profile-com.component';
+import { PublicProfSetComponent } from './shared/public-prof-set/public-prof-set.component';
+import { UpdateProfileComponent } from './Components/update-profile/update-profile.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PublicProfSetComponent } from './Components/profile/public-prof-set/pub
     ImageComponent,
     EditButtonComponent,
     ProfileComComponent,
-    PublicProfSetComponent
+    PublicProfSetComponent,
+    UpdateProfileComponent
   ],
   imports: [
     BrowserModule,

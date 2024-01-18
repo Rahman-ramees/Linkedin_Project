@@ -3,8 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { LogInComponent } from './Components/log-in/log-in.component';
 import { HomeComponent } from './Components/home/home.component';
-import { authGuard } from './shared/auth.guard';
+import { authGuard } from './Service/auth.guard';
 import { ProfileComponent } from './Components/profile/profile.component';
+import { UpdateProfileComponent } from './Components/update-profile/update-profile.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,9 @@ const routes: Routes = [
   },{
     path:'profile',
     component:ProfileComponent
+  },{
+    path:'updateprofile',
+    component:UpdateProfileComponent
   },{
     path:'login',
     component:LogInComponent,
