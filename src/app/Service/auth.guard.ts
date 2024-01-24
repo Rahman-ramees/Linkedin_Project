@@ -9,12 +9,11 @@ export const authGuard: CanActivateFn =(
   ) =>  {
   const authService = inject(AuthService);
   const router = inject(Router);
-  const token =  authService.checkDBuser()
+  const token =  authService.checkDBuser();
   if(token) {
-    router.navigate(['/feed']);
     return true;
   } else {
-    alert("There is no signed data")
+    alert("Create new account")
     router.navigate(['/signup']);
     return false;
   }

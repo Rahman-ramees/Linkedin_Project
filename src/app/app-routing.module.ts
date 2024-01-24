@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SignUpComponent } from './Components/sign-up/sign-up.component';
-import { LogInComponent } from './Components/log-in/log-in.component';
+import { SignUpComponent } from './modules/authModule/Components/sign-up/sign-up.component';
+import { LogInComponent } from './modules/authModule/Components/log-in/log-in.component';
 import { HomeComponent } from './Components/home/home.component';
 import { authGuard } from './Service/auth.guard';
 import { ProfileComponent } from './Components/profile/profile.component';
 import { UpdateProfileComponent } from './Components/update-profile/update-profile.component';
-import { TestComponent } from './modules/feed/components/test/test.component';
 
 const routes: Routes = [
   {

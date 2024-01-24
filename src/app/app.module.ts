@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignUpComponent } from './Components/sign-up/sign-up.component';
-import { LogInComponent } from './Components/log-in/log-in.component';
+// import { SignUpComponent } from './modules/authModule/Components/sign-up/sign-up.component';
+// import { LogInComponent } from './modules/authModule/Components/log-in/log-in.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './Components/home/home.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
@@ -16,13 +17,13 @@ import { PublicProfSetComponent } from './shared/public-prof-set/public-prof-set
 import { UpdateProfileComponent } from './Components/update-profile/update-profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
-import { FeedModule } from './modules/feed/feed.module';
+import { AuthModule } from './modules/authModule/auth.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignUpComponent,
-    LogInComponent,
+    // SignUpComponent,
+    // LogInComponent,
     HomeComponent,
     NavbarComponent,
     ProfileComponent,
@@ -30,7 +31,7 @@ import { FeedModule } from './modules/feed/feed.module';
     EditButtonComponent,
     ProfileComComponent,
     PublicProfSetComponent,
-    UpdateProfileComponent
+    UpdateProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +39,8 @@ import { FeedModule } from './modules/feed/feed.module';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    FeedModule
+    AuthModule,
+    HttpClientModule
   ],
   exports:[],
   providers: [],
