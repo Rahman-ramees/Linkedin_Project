@@ -6,10 +6,11 @@ import { HomeComponent } from './Components/home/home.component';
 import { authGuard } from './Service/auth.guard';
 import { ProfileComponent } from './Components/profile/profile.component';
 import { UpdateProfileComponent } from './Components/update-profile/update-profile.component';
+import { TestComponent } from './modules/feed/components/test/test.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path:'feed',
     component:HomeComponent
   },{
     path:'signup',
@@ -21,7 +22,7 @@ const routes: Routes = [
     path:'updateprofile',
     component:UpdateProfileComponent
   },{
-    path:'login',
+    path:'',
     component:LogInComponent,
     canActivate:[authGuard]
   }

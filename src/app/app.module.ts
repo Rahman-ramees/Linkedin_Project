@@ -16,6 +16,7 @@ import { PublicProfSetComponent } from './shared/public-prof-set/public-prof-set
 import { UpdateProfileComponent } from './Components/update-profile/update-profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
+import { FeedModule } from './modules/feed/feed.module';
 
 @NgModule({
   declarations: [
@@ -36,8 +37,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    FeedModule
   ],
+  exports:[],
   providers: [],
   bootstrap: [AppComponent]
 })

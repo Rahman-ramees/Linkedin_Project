@@ -4,7 +4,7 @@
         <section class="">
             <div class="flex justify-between p-4 border-b">
                 <h1 class="font-bold text-xl">Edit Intro</h1>
-                <button (click)="closeDialog()">
+                <button class="" (click)="closeDialog()">
                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="darkgray" class="w-7 h-7">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                    </svg>
@@ -52,7 +52,7 @@
                             <input type="text" id="Headline" formControlName="headLine" required class="w-full p-3 rounded-lg" />
                             <hr class="mx-3">
                             <div class="p-5">
-                                <h1 class="text-[15px] text-gray-500"><a href="" class="font-bold text-blue-600 text-sm">Get AI suggetions</a> with premium</h1>
+                                <p class="text-gray-500 text-[15px]"><a href="" class="font-bold text-blue-600 text-[15px]">Get AI suggetions</a> with premium</p>
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,6 @@
                 <input type="text" id="currenPosition" formControlName="currenPosition" required class="border border-black p-1 rounded-md" />
             </div>
            </div>
-
               
                 <div class="flex justify-end">
                     <button type="submit" class="bg-blue-600 text-white px-5 py-[5px] rounded-full font-bold">Save</button>

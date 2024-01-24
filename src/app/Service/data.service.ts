@@ -1,25 +1,20 @@
 import { Injectable, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { UpdateProfileComponent } from '../Components/update-profile/update-profile.component';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DataService implements OnInit{
+export class DataService{
 
-  constructor(private dialog:MatDialog){}
-   userProfileData:any
-  
-  ngOnInit() {
-    // This is a lifecycle hook that runs after the component has been initialized
-    console.log("ngOnInit:", this.userProfileData);
+  private userProfileDataSubject = new BehaviorSubject<any>(null);
+  userProfileData$: Observable<any> = this.userProfileDataSubject.asObservable();
 
-  }
-  
-  getUpdatedDataForProfile(data:any) {
-    // This is an example method that might be called later
-    this.userProfileData = data;
-    console.log("After assignment:", this.userProfileData);
+  constructor(private dialog: MatDialog) {}
+
+  getUpdatedDataForProfile(data: any) {
+    this.userProfileDataSubject.next(data);
   }
 
   openModalComponent(data: any) {

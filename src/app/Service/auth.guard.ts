@@ -11,6 +11,7 @@ export const authGuard: CanActivateFn =(
   const router = inject(Router);
   const token =  authService.checkDBuser()
   if(token) {
+    router.navigate(['/feed']);
     return true;
   } else {
     alert("There is no signed data")

@@ -7,7 +7,5 @@ type SignupData = [string, string, string, string];
 export class UserAuthService {
   signupDataArray: SignupData[] = [];
 
-  constructor() { 
-    
-  }
+  constructor() {}
 }
