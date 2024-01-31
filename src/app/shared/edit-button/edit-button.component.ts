@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UpdateProfileComponent } from 'src/app/Components/update-profile/update-profile.component';
+import { UpdateProfileComponent } from 'src/app/modules/profileModule/Components/update-profile/update-profile.component';
 import { DataService } from 'src/app/Service/data.service';
 @Component({
   selector: 'app-edit-button',

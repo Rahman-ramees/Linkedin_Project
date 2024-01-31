@@ -4,8 +4,8 @@ import { SignUpComponent } from './modules/authModule/Components/sign-up/sign-up
 import { LogInComponent } from './modules/authModule/Components/log-in/log-in.component';
 import { HomeComponent } from './Components/home/home.component';
 import { authGuard } from './Service/auth.guard';
-import { ProfileComponent } from './Components/profile/profile.component';
-import { UpdateProfileComponent } from './Components/update-profile/update-profile.component';
+import { ProfileComponent } from './modules/profileModule/Components/profile/profile.component';
+import { UpdateProfileComponent } from './modules/profileModule/Components/update-profile/update-profile.component';
 
 const routes: Routes = [
   {

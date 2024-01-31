@@ -1,6 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { UpdateProfileComponent } from '../Components/update-profile/update-profile.component';
+import { UpdateProfileComponent } from '../modules/profileModule/Components/update-profile/update-profile.component';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
